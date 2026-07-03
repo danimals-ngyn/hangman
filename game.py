@@ -1,1 +1,2 @@
-
+word_bank = ["word1", "word2", "word3"]
+lives = 6
