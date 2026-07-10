@@ -1,13 +1,16 @@
 import random
 
-word_bank = ["word1", "word2", "word3"]
-word = random.choice(word_bank)
+word_bank = ['fruits', 'pineapple', 'smoothie', 'jambajuice', 'apples', 'strawberry', 'grapes', 'lemonade', 'bananas', 'oranges', 'peaches']
+secret_word = random.choice(word_bank)
 lives = 6
 user_input = null
 
+print("Let’s play hangman!")
+
+
 
 #9, 10, 11
-if lives == 0 or user_input == word:
+if lives == 0 or user_input == secret_word:
     if lives == 0:
         print ("Out of Lives! Game Over!")
     if user_input == word:
