@@ -1,0 +1,4 @@
+import random
+print("Let’s play hangman!")
+word_bank = ['fruits', 'pineapple', 'smoothie', 'jambajuice', 'apples', 'strawberry', 'grapes', 'lemonade', 'bananas', 'oranges', 'peaches']
+secret_word = random.choice(word_bank)
