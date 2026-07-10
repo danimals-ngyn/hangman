@@ -1,5 +1,6 @@
 import random
 
+#1, 2
 word_bank = ['fruits', 'pineapple', 'smoothie', 'jambajuice', 'apples', 'strawberry', 'grapes', 'lemonade', 'bananas', 'oranges', 'peaches']
 secret_word = random.choice(word_bank)
 lives = 6
