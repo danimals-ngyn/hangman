@@ -15,6 +15,13 @@
             break
     
         print("Not a valid guess. Please enter a single letter.")
+        #7, 8
+if "_" not in display:
+    break
+
+if lives <= 0:
+    print("Out of lives, game over!")
+    break
     #9, 10, 11
     if lives == 0 or user_input == secret_word:
         if lives == 0:
