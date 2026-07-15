@@ -1,1 +1,6 @@
+if "_" not in display:
+    break
 
+if lives <= 0:
+    print("Out of lives, game over!")
+    break
