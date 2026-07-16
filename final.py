@@ -2,6 +2,7 @@ import random
 
 word_bank = ['fruits', 'pineapple', 'smoothie', 'jambajuice', 'apples', 'strawberry', 'grapes', 'lemonade', 'bananas', 'oranges', 'peaches'] #intializes usable wordbank
 secret_word = random.choice(word_bank) #chooses random word
+original_word = secret_word #For bonus 2, a copy of the secret word for full word guesses
 lives = 6 #default lives is 6
 guessed_letters = [] #to store letters guessed in case of duplicate guesses
 valid = False #boolean to check if guess results in success or loss
@@ -21,9 +22,21 @@ while True:
     print ("Lives: " + str(lives)) #lives
 
     guess = input("Guess?\n") #asks for user input
-    
 
-    if len(guess) == 1 and guess.isalpha(): #checks input validaity  
+    #Bonus 1, help command
+    if guess.lower() == "help":
+        print("\nLetters guessed so far: " + ", ".join(guessed_letters))
+        continue
+
+    #Bonus 2, guess the whole word
+    elif guess.lower() == "guess answer":
+        full_guess = input("Guess the whole word: ")
+        if full_guess.lower() == original_word.lower():
+            underscores = full_guess.lower()
+        else:
+            lives = 0
+
+    elif len(guess) == 1 and guess.isalpha(): #checks input validaity  
         if guess.lower() in guessed_letters:
             print ("\nYou already guesssed " + guess.lower() + "!")
         else:
@@ -53,6 +66,7 @@ while True:
             if response == "yes":
                 lives = 6 #resets lives and the loop comes again. 
                 secret_word = random.choice(word_bank) #chooses random word again
+                original_word = secret_word #For bonus 2, a copy of the secret word for full word guesses
                 guessed_letters = [] #resets guessed letters bank
                 underscores = "" #intializes underscores as empty 
                 for i, letter in enumerate(secret_word): #sets up underscores
