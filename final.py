@@ -28,7 +28,7 @@ while True:
                     secret_word = secret_word[:secret_word.index(letter)] + "`" + secret_word[secret_word.index(letter)+1:] #changes the corresponding letter in the secret word to a "`" because secret_word.index(letter) only looks for the first instance of that letter in the string, ignoring words that have multiple instances of the same letter, and so replacing it allows consideration of other instances of the ltter in the for loop. using "'" because no one uses it and its not a valid input anyway.
                     valid = True #if an instance of the gussed letter is found in the secret word, the guess is valid and no life is lost
         if valid == False: #if an instance is not found after going through the whole word, life is lost.
-            print ("Letter Not Found!")
+            print ("Letter not found!")
             lives -=1
         valid = False #resets to default as false
     else:
@@ -37,13 +37,13 @@ while True:
 
     if lives <= 0 or "_" not in underscores: #checks for winning/losing/endgame event after each guess (when lives are gone or no more underscores)
         if lives <= 0:
-            print ("Out of Lives! Game Over!")
+            print ("Out of lives! Game over!")
         if "_" not in underscores:
             print ("You win!")   
         response = input ("Play Again? (yes/no)") #in either event (winning or losing), play again is prompted
         while True:
             if response != "yes" and response != "no":
-                response = input ("Invalid Input. Play Again? (yes/no)") #checks input is valid. 
+                response = input ("Invalid input. Play again? (yes/no)") #checks input is valid. 
             if response == "yes":
                 lives = 6 #resets lives and the loop comes again. 
                 secret_word = random.choice(word_bank) #chooses random word again
