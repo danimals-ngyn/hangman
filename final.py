@@ -45,7 +45,14 @@ while True:
             if response != "yes" and response != "no":
                 response = input ("Invalid Input. Play Again? (yes/no)") #checks input is valid. 
             if response == "yes":
-                lives = 6 #rests lives and the loop comes again. 
+                lives = 6 #resets lives and the loop comes again. 
+                secret_word = random.choice(word_bank) #chooses random word again
+                underscores = "" #intializes underscores as empty 
+                for letter in secret_word: #sets up underscores
+                    underscores = underscores + "_"
+                    if letter != secret_word[-1]:
+                        underscores = underscores + " " #adds space between underscores but not after the last one
+                print("\nLet’s play hangman!") #introduction prompt
                 break 
             if response == "no":    
                 raise SystemExit() #execute terminal if no
