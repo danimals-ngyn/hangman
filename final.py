@@ -40,7 +40,7 @@ while True:
             print ("Out of lives! Game over!")
         if "_" not in underscores:
             print ("You win!")   
-        response = input ("Play Again? (yes/no)") #in either event (winning or losing), play again is prompted
+        response = input ("Play again? (yes/no)") #in either event (winning or losing), play again is prompted
         while True:
             if response != "yes" and response != "no":
                 response = input ("Invalid input. Play again? (yes/no)") #checks input is valid. 
