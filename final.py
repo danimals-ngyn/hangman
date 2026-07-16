@@ -1,19 +1,17 @@
 import random
 
 word_bank = ['fruits', 'pineapple', 'smoothie', 'jambajuice', 'apples', 'strawberry', 'grapes', 'lemonade', 'bananas', 'oranges', 'peaches'] #intializes usable wordbank
-secret_word = random.choice(word_bank) #chooses random word
+# secret_word = random.choice(word_bank) #chooses random word
+secret_word = "lemonade"
 lives = 6 #default lives is 6
 valid = False #boolean to check if guess results in success or loss
 underscores = "" #intializes underscores as empty 
 
 for letter in secret_word: #sets up underscores
-    underscores = underscores + "_"
-    if letter != secret_word[-1]:
-        underscores = underscores + " " #adds space between underscores but not after the last one
-
+    underscores = underscores + "_ "
 
 print("\nLet’s play hangman!") #introduction prompt
-print("Guess all the letters one at a time of the secret word to win! You have six lives, and you lose one when your guessed letter is not in the word. When you lose all your lives you die. Don't die.") #introduction prompt
+print("Guess all the letters one at a time of the secret word to win! You have six lives, and you lose one when your guessed letter is not in the word.") #introduction prompt
 
 while True: 
     print()
