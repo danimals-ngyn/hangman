@@ -14,7 +14,7 @@ for i, letter in enumerate(secret_word): #sets up underscores
 
 
 print("\nLet’s play hangman!") #introduction prompt
-print("Guess all the letters one at a time of the secret word to win! You have six lives, and you lose one when your guessed letter is not in the word. When you lose all your lives you die. Don't die.") #introduction prompt
+print("Guess the letters of the secret word one at a time; spell out the word to win! You have six lives, and you lose one when your guessed letter is not in the word. When you lose all your lives you die. Don't die. Ask for help by typing 'help' to get a list of all of your past guesses, and type 'guess answer' to try guessing the entire word. If you get it wrong, it does have a cost...") #introduction prompt
 
 while True: 
     print()
