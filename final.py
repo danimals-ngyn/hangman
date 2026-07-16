@@ -55,9 +55,9 @@ while True:
                 secret_word = random.choice(word_bank) #chooses random word again
                 guessed_letters = [] #resets guessed letters bank
                 underscores = "" #intializes underscores as empty 
-                for letter in secret_word: #sets up underscores
+                for i, letter in enumerate(secret_word): #sets up underscores
                     underscores = underscores + "_"
-                    if letter != secret_word[-1]:
+                    if i != len(secret_word) - 1:
                         underscores = underscores + " " #adds space between underscores but not after the last one
                 print("\nLet’s play hangman!") #introduction prompt
                 break 
