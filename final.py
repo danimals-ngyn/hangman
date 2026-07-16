@@ -13,6 +13,7 @@ for letter in secret_word: #sets up underscores
 
 
 print("\nLet’s play hangman!") #introduction prompt
+print("Guess all the letters one at a time of the secret word to win! You have six lives, and you lose one when your guessed letter is not in the word.") #introduction prompt
 
 while True: 
     print()
@@ -23,7 +24,7 @@ while True:
     
 
     if len(guess) == 1 and guess.isalpha: #checks input validaity  
-        if guess.lower() in underscores: #checks if the letter already exists in the underscores 
+        if guess.lower() in underscores:
             print ("\nYou already guesssed " + guess.lower() + "!")
         else:
             for letter in secret_word: #goes through each character of the secret word and checks the guess against the character
@@ -60,6 +61,9 @@ while True:
                 break 
             if response == "no":    
                 raise SystemExit() #execute terminal if no
+    
+            
+    
     
             
     
